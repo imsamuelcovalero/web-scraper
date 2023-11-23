@@ -1,0 +1,39 @@
+{
+  "name": "web-scraper",
+  "version": "1.0.0",
+  "description": "Web Scraping App",
+  "main": "index.js",
+  "scripts": {
+    "test": "\"echo \\\"Error: no test specified\\\" && exit 1\"",
+    "lint": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/imsamuelcovalero/web-scraper.git"
+  },
+  "keywords": [
+    "web-scraper",
+    "nodejs",
+    "axios",
+    "cheerio"
+  ],
+  "author": {
+    "name": "ImSamuelCovalero",
+    "email": "reis_samuel@hotmail.com"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/imsamuelcovalero/web-scraper/issues"
+  },
+  "homepage": "https://github.com/imsamuelcovalero/web-scraper#readme",
+  "dependencies": {
+    "axios": "^1.6.2",
+    "cheerio": "^1.0.0-rc.12"
+  },
+  "devDependencies": {
+    "eslint": "^8.54.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.29.0",
+    "jest": "^29.7.0"
+  }
+}
