@@ -28,7 +28,8 @@
   "homepage": "https://github.com/imsamuelcovalero/web-scraper#readme",
   "dependencies": {
     "axios": "^1.6.2",
-    "cheerio": "^1.0.0-rc.12"
+    "cheerio": "^1.0.0-rc.12",
+    "puppeteer": "^21.5.2"
   },
   "devDependencies": {
     "eslint": "^8.54.0",
