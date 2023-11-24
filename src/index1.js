@@ -2,16 +2,6 @@
 const puppeteer = require('puppeteer');
 const fs = require('fs');
 
-const sequelize = require('./database/config/database');
-const Laptop = require('./database/models/Laptop');
-const HddOption = require('./database/models/HddOption');
-
-sequelize.sync().then(() => {
-  console.log('Tabelas criadas com sucesso!');
-}).catch((error) => {
-  console.error('Erro ao criar tabelas:', error);
-});
-
 const url = 'https://webscraper.io/test-sites/e-commerce/allinone/computers/laptops';
 
 (async () => {
@@ -67,6 +57,6 @@ const url = 'https://webscraper.io/test-sites/e-commerce/allinone/computers/lapt
   }
 
   await browser.close();
-  fs.writeFileSync('lenovo-laptops-details.json', JSON.stringify(laptopsData, null, 2));
+  fs.writeFileSync('lenovo-laptops.json', JSON.stringify(laptopsData, null, 2));
   console.log('Dados dos laptops Lenovo foram salvos.');
 })();

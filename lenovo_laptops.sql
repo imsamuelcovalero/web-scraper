@@ -1,85 +1,218 @@
--- MySQL dump 10.13  Distrib 8.0.35, for Linux (x86_64)
---
--- Host: 127.0.0.1    Database: web-scraper-db
--- ------------------------------------------------------
--- Server version	8.0.33
-
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!50503 SET NAMES utf8mb4 */;
-/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
-/*!40103 SET TIME_ZONE='+00:00' */;
-/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40101 SET NAMES utf8 */;
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
---
--- Table structure for table `hddOptions`
---
+# ------------------------------------------------------------
+# SCHEMA DUMP FOR TABLE: hddOptions
+# ------------------------------------------------------------
 
-DROP TABLE IF EXISTS `hddOptions`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `hddOptions` (
+CREATE TABLE IF NOT EXISTS `hddOptions` (
   `id` int NOT NULL AUTO_INCREMENT,
   `size` varchar(255) NOT NULL,
-  `price` decimal(10,2) NOT NULL,
+  `price` decimal(10, 2) NOT NULL,
   `createdAt` datetime NOT NULL,
   `updatedAt` datetime NOT NULL,
   `laptopId` int DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `laptopId` (`laptopId`),
-  CONSTRAINT `hddOptions_ibfk_1` FOREIGN KEY (`laptopId`) REFERENCES `laptops` (`id`) ON DELETE SET NULL ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=61 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
+  CONSTRAINT `hddOptions_ibfk_1` FOREIGN KEY (`laptopId`) REFERENCES `laptops` (`id`) ON DELETE
+  SET
+  NULL ON UPDATE CASCADE
+) ENGINE = InnoDB AUTO_INCREMENT = 7 DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci;
 
---
--- Dumping data for table `hddOptions`
---
+# ------------------------------------------------------------
+# SCHEMA DUMP FOR TABLE: laptops
+# ------------------------------------------------------------
 
-LOCK TABLES `hddOptions` WRITE;
-/*!40000 ALTER TABLE `hddOptions` DISABLE KEYS */;
-INSERT INTO `hddOptions` VALUES (1,'128',321.94,'2023-11-24 19:40:30','2023-11-24 19:40:30',1),(2,'256',341.94,'2023-11-24 19:40:31','2023-11-24 19:40:31',1),(3,'512',361.94,'2023-11-24 19:40:32','2023-11-24 19:40:32',1),(4,'128',356.49,'2023-11-24 19:40:34','2023-11-24 19:40:34',2),(5,'256',376.49,'2023-11-24 19:40:35','2023-11-24 19:40:35',2),(6,'512',396.49,'2023-11-24 19:40:36','2023-11-24 19:40:36',2),(7,'128',404.23,'2023-11-24 19:40:39','2023-11-24 19:40:39',3),(8,'256',424.23,'2023-11-24 19:40:40','2023-11-24 19:40:40',3),(9,'512',444.23,'2023-11-24 19:40:41','2023-11-24 19:40:41',3),(10,'128',409.63,'2023-11-24 19:40:43','2023-11-24 19:40:43',4),(11,'256',429.63,'2023-11-24 19:40:44','2023-11-24 19:40:44',4),(12,'512',449.63,'2023-11-24 19:40:45','2023-11-24 19:40:45',4),(13,'128',454.73,'2023-11-24 19:40:47','2023-11-24 19:40:47',5),(14,'256',474.73,'2023-11-24 19:40:48','2023-11-24 19:40:48',5),(15,'512',494.73,'2023-11-24 19:40:49','2023-11-24 19:40:49',5),(16,'128',465.95,'2023-11-24 19:40:51','2023-11-24 19:40:51',6),(17,'256',485.95,'2023-11-24 19:40:52','2023-11-24 19:40:52',6),(18,'512',505.95,'2023-11-24 19:40:53','2023-11-24 19:40:53',6),(19,'128',484.23,'2023-11-24 19:40:56','2023-11-24 19:40:56',7),(20,'256',504.23,'2023-11-24 19:40:57','2023-11-24 19:40:57',7),(21,'512',524.23,'2023-11-24 19:40:58','2023-11-24 19:40:58',7),(22,'128',487.80,'2023-11-24 19:41:00','2023-11-24 19:41:00',8),(23,'256',507.80,'2023-11-24 19:41:01','2023-11-24 19:41:01',8),(24,'512',527.80,'2023-11-24 19:41:02','2023-11-24 19:41:02',8),(25,'128',498.23,'2023-11-24 19:41:04','2023-11-24 19:41:04',9),(26,'256',518.23,'2023-11-24 19:41:05','2023-11-24 19:41:05',9),(27,'512',538.23,'2023-11-24 19:41:06','2023-11-24 19:41:06',9),(28,'128',999.00,'2023-11-24 19:41:09','2023-11-24 19:41:09',10),(29,'256',1019.00,'2023-11-24 19:41:10','2023-11-24 19:41:10',10),(30,'512',1039.00,'2023-11-24 19:41:11','2023-11-24 19:41:11',10),(31,'128',1096.02,'2023-11-24 19:41:13','2023-11-24 19:41:13',11),(32,'256',1116.02,'2023-11-24 19:41:14','2023-11-24 19:41:14',11),(33,'512',1136.02,'2023-11-24 19:41:15','2023-11-24 19:41:15',11),(34,'128',1112.91,'2023-11-24 19:41:17','2023-11-24 19:41:17',12),(35,'256',1132.91,'2023-11-24 19:41:18','2023-11-24 19:41:18',12),(36,'512',1152.91,'2023-11-24 19:41:19','2023-11-24 19:41:19',12),(37,'128',1133.91,'2023-11-24 19:41:22','2023-11-24 19:41:22',13),(38,'256',1153.91,'2023-11-24 19:41:23','2023-11-24 19:41:23',13),(39,'512',1173.91,'2023-11-24 19:41:24','2023-11-24 19:41:24',13),(40,'128',1149.00,'2023-11-24 19:41:26','2023-11-24 19:41:26',14),(41,'256',1169.00,'2023-11-24 19:41:27','2023-11-24 19:41:27',14),(42,'512',1189.00,'2023-11-24 19:41:28','2023-11-24 19:41:28',14),(43,'128',1149.73,'2023-11-24 19:41:30','2023-11-24 19:41:30',15),(44,'256',1169.73,'2023-11-24 19:41:31','2023-11-24 19:41:31',15),(45,'512',1189.73,'2023-11-24 19:41:32','2023-11-24 19:41:32',15),(46,'128',1199.73,'2023-11-24 19:41:35','2023-11-24 19:41:35',16),(47,'256',1219.73,'2023-11-24 19:41:36','2023-11-24 19:41:36',16),(48,'512',1239.73,'2023-11-24 19:41:37','2023-11-24 19:41:37',16),(49,'128',1212.16,'2023-11-24 19:41:39','2023-11-24 19:41:39',17),(50,'256',1232.16,'2023-11-24 19:41:40','2023-11-24 19:41:40',17),(51,'512',1252.16,'2023-11-24 19:41:41','2023-11-24 19:41:41',17),(52,'128',1349.23,'2023-11-24 19:41:43','2023-11-24 19:41:43',18),(53,'256',1369.23,'2023-11-24 19:41:44','2023-11-24 19:41:44',18),(54,'512',1389.23,'2023-11-24 19:41:45','2023-11-24 19:41:45',18),(55,'128',1362.24,'2023-11-24 19:41:47','2023-11-24 19:41:47',19),(56,'256',1382.24,'2023-11-24 19:41:48','2023-11-24 19:41:48',19),(57,'512',1402.24,'2023-11-24 19:41:49','2023-11-24 19:41:49',19),(58,'128',1399.00,'2023-11-24 19:41:52','2023-11-24 19:41:52',20),(59,'256',1419.00,'2023-11-24 19:41:53','2023-11-24 19:41:53',20),(60,'512',1439.00,'2023-11-24 19:41:54','2023-11-24 19:41:54',20);
-/*!40000 ALTER TABLE `hddOptions` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `laptops`
---
-
-DROP TABLE IF EXISTS `laptops`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `laptops` (
+CREATE TABLE IF NOT EXISTS `laptops` (
   `id` int NOT NULL AUTO_INCREMENT,
   `title` varchar(255) NOT NULL,
   `description` text NOT NULL,
-  `basePrice` decimal(10,2) NOT NULL,
+  `basePrice` decimal(10, 2) NOT NULL,
   `createdAt` datetime NOT NULL,
   `updatedAt` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
+) ENGINE = InnoDB AUTO_INCREMENT = 4 DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci;
 
---
--- Dumping data for table `laptops`
---
+# ------------------------------------------------------------
+# DATA DUMP FOR TABLE: hddOptions
+# ------------------------------------------------------------
 
-LOCK TABLES `laptops` WRITE;
-/*!40000 ALTER TABLE `laptops` DISABLE KEYS */;
-INSERT INTO `laptops` VALUES (1,'Lenovo V110-15IAP','Lenovo V110-15IAP, 15.6\" HD, Celeron N3350 1.1GHz, 4GB, 128GB SSD, Windows 10 Home',321.94,'2023-11-24 19:40:28','2023-11-24 19:40:28'),(2,'Lenovo V110-15IAP','Asus VivoBook 15 X540NA-GQ008T Chocolate Black, 15.6\" HD, Pentium N4200, 4GB, 500GB, Windows 10 Home, En kbd',356.49,'2023-11-24 19:40:33','2023-11-24 19:40:33'),(3,'Lenovo ThinkPad E31-80','Lenovo ThinkPad E31-80, 13.3\" HD, Celeron 3855U 1.6GHz, 4GB, 128GB SSD, Windows 10 Home',404.23,'2023-11-24 19:40:37','2023-11-24 19:40:37'),(4,'Lenovo V110-15ISK','Lenovo V110-15ISK, 15.6\" HD, Core i3-6006U, 8GB, 128GB SSD, Windows 10 Home',409.63,'2023-11-24 19:40:42','2023-11-24 19:40:42'),(5,'Lenovo V110-15ISK','Lenovo V110-15ISK, 15.6\" HD, Core i3-6006U, 4GB, 128GB SSD, Windows 10 Pro',454.73,'2023-11-24 19:40:46','2023-11-24 19:40:46'),(6,'Lenovo V110-15IKB','Lenovo V110-15IKB, 15.6\" HD, Core i5-7200U, 4GB, 500GB, DOS',465.95,'2023-11-24 19:40:50','2023-11-24 19:40:50'),(7,'Lenovo V510 Black','Lenovo V510 Black, 14\" HD, Core i3-6006U, 4GB, 128GB SSD, Windows 10 Home',484.23,'2023-11-24 19:40:55','2023-11-24 19:40:55'),(8,'Lenovo V510 Black','Lenovo V510 Black, 15.6\" HD, Core i3-6006U, 4GB, 128GB SSD, Windows 10 Home',487.80,'2023-11-24 19:40:59','2023-11-24 19:40:59'),(9,'Lenovo V510 Black','Lenovo V510 Black, 15.6\" FHD, Core i3-7100U, 4GB, 128GB SSD, Windows 10 Pro',498.23,'2023-11-24 19:41:03','2023-11-24 19:41:03'),(10,'Lenovo ThinkPad L570','Lenovo ThinkPad L570, 15.6\" FHD, Core i7-7500U, 8GB, 256GB SSD, Windows 10 Pro',999.00,'2023-11-24 19:41:08','2023-11-24 19:41:08'),(11,'Lenovo ThinkPad L460','Lenovo ThinkPad L460, 14\" FHD IPS, Core i7-6600U, 8GB, 256GB SSD, Windows 10 Pro',1096.02,'2023-11-24 19:41:12','2023-11-24 19:41:12'),(12,'Lenovo Legion Y520-15IKBM','Lenovo Legion Y520-15IKBM, Black, 15.6\" FHD IPS, Core i5-7300HQ, 8 GB, 128GB SSD + 2 TB HDD, NVIDIA GeForce GTX 1060 6 GB, FreeDOS + Windows 10 Home',1112.91,'2023-11-24 19:41:16','2023-11-24 19:41:16'),(13,'Lenovo Legion Y520','Lenovo Legion Y520, 15.6\" FHD, Core i7-7700HQ, 8GB, 128 GB SSD + 1TB HDD, GTX 1050 4GB, Windows 10 Home',1133.91,'2023-11-24 19:41:21','2023-11-24 19:41:21'),(14,'Lenovo Legion Y520-15IKBM','Lenovo Legion Y520-15IKBM, 15.6\" FHD IPS, Core i7-7700HQ, 8GB, 128GB SSD + 1TB, GeForce GTX 1060 Max-Q 6GB, DOS',1149.00,'2023-11-24 19:41:25','2023-11-24 19:41:25'),(15,'Lenovo Yoga 720 Grey','Lenovo Yoga 720 Grey, 15.6\" FHD IPS, Core i5-7300HQ, 8GB, 256GB SSD, GeForce GTX 1050 2GB, Windows 10 Home',1149.73,'2023-11-24 19:41:29','2023-11-24 19:41:29'),(16,'Lenovo Yoga 910 Grey','Lenovo Yoga 910 Grey, 13.9\" FHD Touch, Core i5-7200U, 8GB, 256GB SSD, Windows 10 Home',1199.73,'2023-11-24 19:41:34','2023-11-24 19:41:34'),(17,'Lenovo IdeaPad Miix 510 Platinum Silver','Lenovo IdeaPad Miix 510 Platinum Silver, 12.2\" IPS Touch, Core i5-7200U, 8GB, 256GB SSD, 4G, Windows 10 Pro',1212.16,'2023-11-24 19:41:38','2023-11-24 19:41:38'),(18,'Lenovo ThinkPad T470','Lenovo ThinkPad T470, 14\" FHD IPS, Core i5-7200U, 8GB, 256GB SSD, Windows 10 Pro',1349.23,'2023-11-24 19:41:42','2023-11-24 19:41:42'),(19,'Lenovo ThinkPad Yoga 370 Black','Lenovo ThinkPad Yoga 370 Black, 13.3\" FHD IPS Touch, Core i5-7200U, 8GB, 256GB SSD, 4G, Windows 10 Pro',1362.24,'2023-11-24 19:41:46','2023-11-24 19:41:46'),(20,'Lenovo Legion Y720','Lenovo Legion Y720, 15.6\" FHD IPS, Core i7-7700HQ, 8GB, 128GB SSD + 2TB HDD, GeForce GTX 1060 6GB, DOS, RGB backlit keyboard',1399.00,'2023-11-24 19:41:51','2023-11-24 19:41:51');
-/*!40000 ALTER TABLE `laptops` ENABLE KEYS */;
-UNLOCK TABLES;
-/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+INSERT INTO
+  `hddOptions` (
+    `id`,
+    `size`,
+    `price`,
+    `createdAt`,
+    `updatedAt`,
+    `laptopId`
+  )
+VALUES
+  (
+    1,
+    '128',
+    321.94,
+    '2023-11-24 20:55:48',
+    '2023-11-24 20:55:48',
+    1
+  );
+INSERT INTO
+  `hddOptions` (
+    `id`,
+    `size`,
+    `price`,
+    `createdAt`,
+    `updatedAt`,
+    `laptopId`
+  )
+VALUES
+  (
+    2,
+    '256',
+    341.94,
+    '2023-11-24 20:55:49',
+    '2023-11-24 20:55:49',
+    1
+  );
+INSERT INTO
+  `hddOptions` (
+    `id`,
+    `size`,
+    `price`,
+    `createdAt`,
+    `updatedAt`,
+    `laptopId`
+  )
+VALUES
+  (
+    3,
+    '512',
+    361.94,
+    '2023-11-24 20:55:50',
+    '2023-11-24 20:55:50',
+    1
+  );
+INSERT INTO
+  `hddOptions` (
+    `id`,
+    `size`,
+    `price`,
+    `createdAt`,
+    `updatedAt`,
+    `laptopId`
+  )
+VALUES
+  (
+    4,
+    '128',
+    356.49,
+    '2023-11-24 20:55:52',
+    '2023-11-24 20:55:52',
+    2
+  );
+INSERT INTO
+  `hddOptions` (
+    `id`,
+    `size`,
+    `price`,
+    `createdAt`,
+    `updatedAt`,
+    `laptopId`
+  )
+VALUES
+  (
+    5,
+    '256',
+    376.49,
+    '2023-11-24 20:55:53',
+    '2023-11-24 20:55:53',
+    2
+  );
+INSERT INTO
+  `hddOptions` (
+    `id`,
+    `size`,
+    `price`,
+    `createdAt`,
+    `updatedAt`,
+    `laptopId`
+  )
+VALUES
+  (
+    6,
+    '512',
+    396.49,
+    '2023-11-24 20:55:54',
+    '2023-11-24 20:55:54',
+    2
+  );
 
+# ------------------------------------------------------------
+# DATA DUMP FOR TABLE: laptops
+# ------------------------------------------------------------
+
+INSERT INTO
+  `laptops` (
+    `id`,
+    `title`,
+    `description`,
+    `basePrice`,
+    `createdAt`,
+    `updatedAt`
+  )
+VALUES
+  (
+    1,
+    'Lenovo V110-15IAP',
+    'Lenovo V110-15IAP, 15.6\" HD, Celeron N3350 1.1GHz, 4GB, 128GB SSD, Windows 10 Home',
+    321.94,
+    '2023-11-24 20:55:47',
+    '2023-11-24 20:55:47'
+  );
+INSERT INTO
+  `laptops` (
+    `id`,
+    `title`,
+    `description`,
+    `basePrice`,
+    `createdAt`,
+    `updatedAt`
+  )
+VALUES
+  (
+    2,
+    'Lenovo V110-15IAP',
+    'Asus VivoBook 15 X540NA-GQ008T Chocolate Black, 15.6\" HD, Pentium N4200, 4GB, 500GB, Windows 10 Home, En kbd',
+    356.49,
+    '2023-11-24 20:55:51',
+    '2023-11-24 20:55:51'
+  );
+INSERT INTO
+  `laptops` (
+    `id`,
+    `title`,
+    `description`,
+    `basePrice`,
+    `createdAt`,
+    `updatedAt`
+  )
+VALUES
+  (
+    3,
+    'Lenovo ThinkPad E31-80',
+    'Lenovo ThinkPad E31-80, 13.3\" HD, Celeron 3855U 1.6GHz, 4GB, 128GB SSD, Windows 10 Home',
+    404.23,
+    '2023-11-24 20:55:55',
+    '2023-11-24 20:55:55'
+  );
+
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
-/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
-
--- Dump completed on 2023-11-24 16:42:55
