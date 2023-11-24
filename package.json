@@ -4,6 +4,7 @@
   "description": "Web Scraping App",
   "main": "index.js",
   "scripts": {
+    "start": "node src/index.js",
     "test": "\"echo \\\"Error: no test specified\\\" && exit 1\"",
     "lint": "eslint ."
   },
@@ -29,7 +30,9 @@
   "dependencies": {
     "axios": "^1.6.2",
     "cheerio": "^1.0.0-rc.12",
-    "puppeteer": "^21.5.2"
+    "mysql2": "^3.6.5",
+    "puppeteer": "^21.5.2",
+    "sequelize": "^6.35.1"
   },
   "devDependencies": {
     "eslint": "^8.54.0",

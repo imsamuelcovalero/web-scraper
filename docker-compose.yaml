@@ -1,0 +1,45 @@
+version: '3.8'
+services:
+  # app:
+  #   container_name: node # Nome do container Docker
+  #   build: .
+  #   ports:
+  #     - "3000:3000"
+  #   tty: true # Habilita o pseudo-TTY
+  #   stdin_open: true # Mantém o STDIN aberto mesmo se não anexado
+  #   command: [ "npm", "start" ] # Comando para iniciar o container
+  #   environment:
+  #     - APP_PORT=3000
+  #     - MYSQL_HOST=db
+  #     - MYSQL_USER=root
+  #     - MYSQL_PASSWORD=123456
+  #     - MYSQL_DB=web-scraper
+  #     - MYSQL_PORT=3306
+  #   depends_on:
+  #     - db
+
+  # Nome do serviço do banco de dados
+  db:
+    image: mysql:8.0
+    container_name: web-scraper-db
+    platform: linux/x86_64 # Plataforma do container
+    ports:
+      - "3306:3306"
+    restart: 'always' # Reinicia o container automaticamente se ele parar
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
+    # networks:
+    #   - web-scraper_network-app-to-bd # Adiciona este serviço à rede especificada
+    cap_add:
+      - SYS_NICE # Adiciona capacidades ao container
+    expose:
+      - '3306' # Expõe a porta 3306
+    healthcheck:
+      # Verifica se o serviço está saudável
+      test: [ "CMD", "mysqladmin", "ping", "-h", "db" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+# networks:
+#   web-scraper_network-app-to-bd: {} # Cria uma rede para comunicação entre os serviços
