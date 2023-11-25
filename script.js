@@ -9,23 +9,23 @@
   // Função para executar a ação escolhida pelo usuário
   async function executeOption(option) {
     switch (option) {
-      case 'Padrão: Raspar e salvar no banco MySQL':
+      case '1) Padrão: Raspar e salvar no banco MySQL':
         await scraperFunctions.scrapeAndSave();
         break;
-      case 'Gerar arquivo SQL proveniente do banco MySQL':
+      case '2) Gerar arquivo SQL proveniente do banco MySQL':
         await scraperFunctions.generateSQL();
         break;
-      case 'Gerar arquivo JSON a partir do banco MySQL':
+      case '3) Gerar arquivo JSON a partir do banco MySQL':
         await scraperFunctions.exportMySQLtoJSON();
         break;
-      case 'Gerar ambos os arquivos a partir do banco MySQL':
+      case '4) Gerar ambos os arquivos a partir do banco MySQL':
         await scraperFunctions.exportMySQLtoJSON();
         await scraperFunctions.generateSQL();
         break;
-      case 'Gerar arquivo JSON diretamente pela raspagem (sem banco de dados)':
+      case '5) Gerar arquivo JSON diretamente pela raspagem (sem banco de dados)':
         await scraperFunctions.generateJSON();
         break;
-      case 'Cancelar':
+      case '6) Cancelar':
         console.log('Ação cancelada.');
         break;
       default:
@@ -41,12 +41,12 @@
         name: 'action',
         message: 'Escolha uma ação:',
         choices: [
-          'Padrão: Raspar e salvar no banco MySQL',
-          'Gerar arquivo SQL proveniente do banco MySQL',
-          'Gerar arquivo JSON a partir do banco MySQL',
-          'Gerar ambos os arquivos a partir do banco MySQL',
-          'Gerar arquivo JSON diretamente pela raspagem (sem banco de dados)',
-          'Cancelar',
+          '1) Padrão: Raspar e salvar no banco MySQL',
+          '2) Gerar arquivo SQL proveniente do banco MySQL',
+          '3) Gerar arquivo JSON a partir do banco MySQL',
+          '4) Gerar ambos os arquivos a partir do banco MySQL',
+          '5) Gerar arquivo JSON diretamente pela raspagem (sem banco de dados)',
+          '6) Cancelar',
         ],
       },
     ])
