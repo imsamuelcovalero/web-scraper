@@ -1,122 +1,381 @@
 [
   {
-    "title": "Test Laptop",
-    "description": "A test laptop description",
-    "basePrice": "$999.99",
+    "title": "Lenovo V110-15IAP",
+    "description": "Lenovo V110-15IAP, 15.6\" HD, Celeron N3350 1.1GHz, 4GB, 128GB SSD, Windows 10 Home",
+    "basePrice": "$321.94",
     "hddOptions": [
       {
-        "size": "256GB",
-        "price": "$50.00"
+        "size": "128",
+        "price": "$321.94"
+      },
+      {
+        "size": "256",
+        "price": "$341.94"
+      },
+      {
+        "size": "512",
+        "price": "$361.94"
       }
     ]
   },
   {
-    "title": "Test Laptop",
-    "description": "A test laptop description",
-    "basePrice": "$999.99",
+    "title": "Lenovo V110-15IAP",
+    "description": "Asus VivoBook 15 X540NA-GQ008T Chocolate Black, 15.6\" HD, Pentium N4200, 4GB, 500GB, Windows 10 Home, En kbd",
+    "basePrice": "$356.49",
     "hddOptions": [
       {
-        "size": "256GB",
-        "price": "$50.00"
+        "size": "128",
+        "price": "$356.49"
+      },
+      {
+        "size": "256",
+        "price": "$376.49"
+      },
+      {
+        "size": "512",
+        "price": "$396.49"
       }
     ]
   },
   {
-    "title": "Test Laptop",
-    "description": "A test laptop description",
-    "basePrice": "$999.99",
+    "title": "Lenovo ThinkPad E31-80",
+    "description": "Lenovo ThinkPad E31-80, 13.3\" HD, Celeron 3855U 1.6GHz, 4GB, 128GB SSD, Windows 10 Home",
+    "basePrice": "$404.23",
     "hddOptions": [
       {
-        "size": "256GB",
-        "price": "$50.00"
+        "size": "128",
+        "price": "$404.23"
+      },
+      {
+        "size": "256",
+        "price": "$424.23"
+      },
+      {
+        "size": "512",
+        "price": "$444.23"
       }
     ]
   },
   {
-    "title": "Test Laptop",
-    "description": "A test laptop description",
-    "basePrice": "$999.99",
+    "title": "Lenovo V110-15ISK",
+    "description": "Lenovo V110-15ISK, 15.6\" HD, Core i3-6006U, 8GB, 128GB SSD, Windows 10 Home",
+    "basePrice": "$409.63",
     "hddOptions": [
       {
-        "size": "256GB",
-        "price": "$50.00"
+        "size": "128",
+        "price": "$409.63"
+      },
+      {
+        "size": "256",
+        "price": "$429.63"
+      },
+      {
+        "size": "512",
+        "price": "$449.63"
       }
     ]
   },
   {
-    "title": "Test Laptop",
-    "description": "A test laptop description",
-    "basePrice": "$999.99",
+    "title": "Lenovo V110-15ISK",
+    "description": "Lenovo V110-15ISK, 15.6\" HD, Core i3-6006U, 4GB, 128GB SSD, Windows 10 Pro",
+    "basePrice": "$454.73",
     "hddOptions": [
       {
-        "size": "256GB",
-        "price": "$50.00"
+        "size": "128",
+        "price": "$454.73"
+      },
+      {
+        "size": "256",
+        "price": "$474.73"
+      },
+      {
+        "size": "512",
+        "price": "$494.73"
       }
     ]
   },
   {
-    "title": "Test Laptop",
-    "description": "A test laptop description",
-    "basePrice": "$999.99",
+    "title": "Lenovo V110-15IKB",
+    "description": "Lenovo V110-15IKB, 15.6\" HD, Core i5-7200U, 4GB, 500GB, DOS",
+    "basePrice": "$465.95",
     "hddOptions": [
       {
-        "size": "256GB",
-        "price": "$50.00"
+        "size": "128",
+        "price": "$465.95"
+      },
+      {
+        "size": "256",
+        "price": "$485.95"
+      },
+      {
+        "size": "512",
+        "price": "$505.95"
       }
     ]
   },
   {
-    "title": "Test Laptop",
-    "description": "A test laptop description",
-    "basePrice": "$999.99",
+    "title": "Lenovo V510 Black",
+    "description": "Lenovo V510 Black, 14\" HD, Core i3-6006U, 4GB, 128GB SSD, Windows 10 Home",
+    "basePrice": "$484.23",
     "hddOptions": [
       {
-        "size": "256GB",
-        "price": "$50.00"
+        "size": "128",
+        "price": "$484.23"
+      },
+      {
+        "size": "256",
+        "price": "$504.23"
+      },
+      {
+        "size": "512",
+        "price": "$524.23"
       }
     ]
   },
   {
-    "title": "Test Laptop",
-    "description": "A test laptop description",
-    "basePrice": "$999.99",
+    "title": "Lenovo V510 Black",
+    "description": "Lenovo V510 Black, 15.6\" HD, Core i3-6006U, 4GB, 128GB SSD, Windows 10 Home",
+    "basePrice": "$487.80",
     "hddOptions": [
       {
-        "size": "256GB",
-        "price": "$50.00"
+        "size": "128",
+        "price": "$487.80"
+      },
+      {
+        "size": "256",
+        "price": "$507.80"
+      },
+      {
+        "size": "512",
+        "price": "$527.80"
       }
     ]
   },
   {
-    "title": "Test Laptop",
-    "description": "A test laptop description",
-    "basePrice": "$999.99",
+    "title": "Lenovo V510 Black",
+    "description": "Lenovo V510 Black, 15.6\" FHD, Core i3-7100U, 4GB, 128GB SSD, Windows 10 Pro",
+    "basePrice": "$498.23",
     "hddOptions": [
       {
-        "size": "256GB",
-        "price": "$50.00"
+        "size": "128",
+        "price": "$498.23"
+      },
+      {
+        "size": "256",
+        "price": "$518.23"
+      },
+      {
+        "size": "512",
+        "price": "$538.23"
       }
     ]
   },
   {
-    "title": "Test Laptop",
-    "description": "A test laptop description",
-    "basePrice": "$999.99",
+    "title": "Lenovo ThinkPad L570",
+    "description": "Lenovo ThinkPad L570, 15.6\" FHD, Core i7-7500U, 8GB, 256GB SSD, Windows 10 Pro",
+    "basePrice": "$999.00",
     "hddOptions": [
       {
-        "size": "256GB",
-        "price": "$50.00"
+        "size": "128",
+        "price": "$999.00"
+      },
+      {
+        "size": "256",
+        "price": "$1019.00"
+      },
+      {
+        "size": "512",
+        "price": "$1039.00"
       }
     ]
   },
   {
-    "title": "Test Laptop",
-    "description": "A test laptop description",
-    "basePrice": "$999.99",
+    "title": "Lenovo ThinkPad L460",
+    "description": "Lenovo ThinkPad L460, 14\" FHD IPS, Core i7-6600U, 8GB, 256GB SSD, Windows 10 Pro",
+    "basePrice": "$1096.02",
     "hddOptions": [
       {
-        "size": "256GB",
-        "price": "$50.00"
+        "size": "128",
+        "price": "$1096.02"
+      },
+      {
+        "size": "256",
+        "price": "$1116.02"
+      },
+      {
+        "size": "512",
+        "price": "$1136.02"
+      }
+    ]
+  },
+  {
+    "title": "Lenovo Legion Y520-15IKBM",
+    "description": "Lenovo Legion Y520-15IKBM, Black, 15.6\" FHD IPS, Core i5-7300HQ, 8 GB, 128GB SSD + 2 TB HDD, NVIDIA GeForce GTX 1060 6 GB, FreeDOS + Windows 10 Home",
+    "basePrice": "$1112.91",
+    "hddOptions": [
+      {
+        "size": "128",
+        "price": "$1112.91"
+      },
+      {
+        "size": "256",
+        "price": "$1132.91"
+      },
+      {
+        "size": "512",
+        "price": "$1152.91"
+      }
+    ]
+  },
+  {
+    "title": "Lenovo Legion Y520",
+    "description": "Lenovo Legion Y520, 15.6\" FHD, Core i7-7700HQ, 8GB, 128 GB SSD + 1TB HDD, GTX 1050 4GB, Windows 10 Home",
+    "basePrice": "$1133.91",
+    "hddOptions": [
+      {
+        "size": "128",
+        "price": "$1133.91"
+      },
+      {
+        "size": "256",
+        "price": "$1153.91"
+      },
+      {
+        "size": "512",
+        "price": "$1173.91"
+      }
+    ]
+  },
+  {
+    "title": "Lenovo Legion Y520-15IKBM",
+    "description": "Lenovo Legion Y520-15IKBM, 15.6\" FHD IPS, Core i7-7700HQ, 8GB, 128GB SSD + 1TB, GeForce GTX 1060 Max-Q 6GB, DOS",
+    "basePrice": "$1149.00",
+    "hddOptions": [
+      {
+        "size": "128",
+        "price": "$1149.00"
+      },
+      {
+        "size": "256",
+        "price": "$1169.00"
+      },
+      {
+        "size": "512",
+        "price": "$1189.00"
+      }
+    ]
+  },
+  {
+    "title": "Lenovo Yoga 720 Grey",
+    "description": "Lenovo Yoga 720 Grey, 15.6\" FHD IPS, Core i5-7300HQ, 8GB, 256GB SSD, GeForce GTX 1050 2GB, Windows 10 Home",
+    "basePrice": "$1149.73",
+    "hddOptions": [
+      {
+        "size": "128",
+        "price": "$1149.73"
+      },
+      {
+        "size": "256",
+        "price": "$1169.73"
+      },
+      {
+        "size": "512",
+        "price": "$1189.73"
+      }
+    ]
+  },
+  {
+    "title": "Lenovo Yoga 910 Grey",
+    "description": "Lenovo Yoga 910 Grey, 13.9\" FHD Touch, Core i5-7200U, 8GB, 256GB SSD, Windows 10 Home",
+    "basePrice": "$1199.73",
+    "hddOptions": [
+      {
+        "size": "128",
+        "price": "$1199.73"
+      },
+      {
+        "size": "256",
+        "price": "$1219.73"
+      },
+      {
+        "size": "512",
+        "price": "$1239.73"
+      }
+    ]
+  },
+  {
+    "title": "Lenovo IdeaPad Miix 510 Platinum Silver",
+    "description": "Lenovo IdeaPad Miix 510 Platinum Silver, 12.2\" IPS Touch, Core i5-7200U, 8GB, 256GB SSD, 4G, Windows 10 Pro",
+    "basePrice": "$1212.16",
+    "hddOptions": [
+      {
+        "size": "128",
+        "price": "$1212.16"
+      },
+      {
+        "size": "256",
+        "price": "$1232.16"
+      },
+      {
+        "size": "512",
+        "price": "$1252.16"
+      }
+    ]
+  },
+  {
+    "title": "Lenovo ThinkPad T470",
+    "description": "Lenovo ThinkPad T470, 14\" FHD IPS, Core i5-7200U, 8GB, 256GB SSD, Windows 10 Pro",
+    "basePrice": "$1349.23",
+    "hddOptions": [
+      {
+        "size": "128",
+        "price": "$1349.23"
+      },
+      {
+        "size": "256",
+        "price": "$1369.23"
+      },
+      {
+        "size": "512",
+        "price": "$1389.23"
+      }
+    ]
+  },
+  {
+    "title": "Lenovo ThinkPad Yoga 370 Black",
+    "description": "Lenovo ThinkPad Yoga 370 Black, 13.3\" FHD IPS Touch, Core i5-7200U, 8GB, 256GB SSD, 4G, Windows 10 Pro",
+    "basePrice": "$1362.24",
+    "hddOptions": [
+      {
+        "size": "128",
+        "price": "$1362.24"
+      },
+      {
+        "size": "256",
+        "price": "$1382.24"
+      },
+      {
+        "size": "512",
+        "price": "$1402.24"
+      }
+    ]
+  },
+  {
+    "title": "Lenovo Legion Y720",
+    "description": "Lenovo Legion Y720, 15.6\" FHD IPS, Core i7-7700HQ, 8GB, 128GB SSD + 2TB HDD, GeForce GTX 1060 6GB, DOS, RGB backlit keyboard",
+    "basePrice": "$1399.00",
+    "hddOptions": [
+      {
+        "size": "128",
+        "price": "$1399.00"
+      },
+      {
+        "size": "256",
+        "price": "$1419.00"
+      },
+      {
+        "size": "512",
+        "price": "$1439.00"
       }
     ]
   }

@@ -13,15 +13,18 @@
       case 'Padrão: Raspar e salvar no banco MySQL':
         await scraperFunctions.scrapeAndSave();
         break;
-      case 'Gerar arquivo JSON a partir do banco MySQL':
-        await scraperFunctions.exportMySQLtoJSON();
-        break;
       case 'Gerar arquivo SQL proveniente do banco MySQL':
         await scraperFunctions.generateSQL();
+        break;
+      case 'Gerar arquivo JSON a partir do banco MySQL':
+        await scraperFunctions.exportMySQLtoJSON();
         break;
       case 'Gerar ambos os arquivos a partir do banco MySQL':
         await scraperFunctions.exportMySQLtoJSON();
         await scraperFunctions.generateSQL();
+        break;
+      case 'Gerar arquivo JSON diretamente pela raspagem (sem banco de dados)':
+        await scraperFunctions.generateJSON();
         break;
       case 'Cancelar':
         console.log('Ação cancelada.');
@@ -40,9 +43,10 @@
         message: 'Escolha uma ação:',
         choices: [
           'Padrão: Raspar e salvar no banco MySQL',
-          'Gerar arquivo JSON a partir do banco MySQL',
           'Gerar arquivo SQL proveniente do banco MySQL',
+          'Gerar arquivo JSON a partir do banco MySQL',
           'Gerar ambos os arquivos a partir do banco MySQL',
+          'Gerar arquivo JSON diretamente pela raspagem (sem banco de dados)',
           'Cancelar',
         ],
       },
