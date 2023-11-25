@@ -14,6 +14,8 @@
 .env.test.local
 .env.production.local
 npm-debug.log*
+./src/index0.js
+./src/index1.js
 
 # Generated script files
 *.sql

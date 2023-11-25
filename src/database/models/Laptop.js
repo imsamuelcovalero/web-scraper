@@ -1,4 +1,3 @@
-/* File: src/database/models/Laptop.js */
 const Sequelize = require('sequelize');
 const sequelize = require('../config/database');
 const HddOption = require('./HddOption');

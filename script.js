@@ -1,4 +1,3 @@
-/* File: script.js */
 // Função autoexecutável para usar importações modernas e async/await
 (async () => {
   // Importação das dependências

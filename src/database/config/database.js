@@ -1,4 +1,3 @@
-/* File: src/database/config/database.js */
 // Importa o módulo dotenv para carregar as variáveis de ambiente do arquivo .env.
 // Isso é crucial para manter as configurações sensíveis, como credenciais do banco de dados,
 // fora do código-fonte e facilmente configuráveis.
