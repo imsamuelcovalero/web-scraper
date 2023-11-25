@@ -129,11 +129,11 @@ Siga as instruções na tela para selecionar a opção desejada e proceder com a
     - **models:** Contém os modelos de dados utilizados pela aplicação.
     - **config:** Contém o arquivo de configuração do banco de dados.
   - **scraperFunctions.js:** Contém as funções de raspagem de dados.
-  - **.env.example:** Contém um exemplo do arquivo `.env` utilizado para armazenar as variáveis de ambiente.
-  - **createDatabase.js:** Contém o script para criação do banco de dados.
-  - **docker-compose.yaml:** Contém a configuração do banco de dados MySQL para uso com `Docker Compose`.
-  - **package.json:** Contém as informações do projeto e as dependências da aplicação e os `scripts` de execução.
-  - **script.js:** Contém o script principal da aplicação.
+- **.env.example:** Contém um exemplo do arquivo `.env` utilizado para armazenar as variáveis de ambiente.
+- **createDatabase.js:** Contém o script para criação do banco de dados.
+- **docker-compose.yaml:** Contém a configuração do banco de dados MySQL para uso com `Docker Compose`.
+- **package.json:** Contém as informações do projeto e as dependências da aplicação e os `scripts` de execução.
+- **script.js:** Contém o script principal da aplicação.
 
 ### Tecnologias e Ferramentas Utilizadas
 
