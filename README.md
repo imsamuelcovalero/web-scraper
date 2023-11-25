@@ -24,7 +24,11 @@ O projeto **Raspagem e Armazenamento de Dados de Laptops** é uma aplicação de
 
 ## Visualização
 
-![Web Scraper](url_da_imagem_aqui) *Substituir por uma imagem representativa do projeto.*
+<div align="center">
+
+![Web Scraper](https://github.com/imsamuelcovalero/web-scraper/assets/98184355/d5443311-164d-4316-aafb-04cfb23deab8)
+
+</div>
 
 ## Contexto
 
