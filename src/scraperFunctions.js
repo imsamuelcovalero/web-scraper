@@ -10,6 +10,7 @@ const HddOption = require('./database/models/HddOption');
 const url = 'https://webscraper.io/test-sites/e-commerce/allinone/computers/laptops';
 
 exports.scrapeAndSave = async function () {
+  console.log('scrapeAndSave foi chamado');
   (async () => {
     sequelize.sync({ force: true }).then(() => {
       console.log('Tabelas criadas com sucesso!');
@@ -17,7 +18,7 @@ exports.scrapeAndSave = async function () {
       console.error('Erro ao criar tabelas:', error);
     });
     // Iniciando o processo de raspagem
-    const browser = await puppeteer.launch({ headless: true });
+    const browser = await puppeteer.launch({ headless: 'new' });
     const page = await browser.newPage();
     console.log('Acessando a página principal...');
     await page.goto(url, { waitUntil: 'networkidle0' });

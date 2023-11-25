@@ -22,7 +22,7 @@ CREATE TABLE IF NOT EXISTS `hddOptions` (
   CONSTRAINT `hddOptions_ibfk_1` FOREIGN KEY (`laptopId`) REFERENCES `laptops` (`id`) ON DELETE
   SET
   NULL ON UPDATE CASCADE
-) ENGINE = InnoDB AUTO_INCREMENT = 7 DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci;
+) ENGINE = InnoDB AUTO_INCREMENT = 78 DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci;
 
 # ------------------------------------------------------------
 # SCHEMA DUMP FOR TABLE: laptops
@@ -36,7 +36,7 @@ CREATE TABLE IF NOT EXISTS `laptops` (
   `createdAt` datetime NOT NULL,
   `updatedAt` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE = InnoDB AUTO_INCREMENT = 4 DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci;
+) ENGINE = InnoDB AUTO_INCREMENT = 38 DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci;
 
 # ------------------------------------------------------------
 # DATA DUMP FOR TABLE: hddOptions
@@ -53,12 +53,12 @@ INSERT INTO
   )
 VALUES
   (
-    1,
-    '128',
-    321.94,
-    '2023-11-24 20:55:48',
-    '2023-11-24 20:55:48',
-    1
+    67,
+    '256GB',
+    50.00,
+    '2023-11-24 23:02:14',
+    '2023-11-24 23:02:14',
+    27
   );
 INSERT INTO
   `hddOptions` (
@@ -71,12 +71,12 @@ INSERT INTO
   )
 VALUES
   (
-    2,
-    '256',
-    341.94,
-    '2023-11-24 20:55:49',
-    '2023-11-24 20:55:49',
-    1
+    68,
+    '256GB',
+    50.00,
+    '2023-11-24 23:06:49',
+    '2023-11-24 23:06:49',
+    28
   );
 INSERT INTO
   `hddOptions` (
@@ -89,12 +89,12 @@ INSERT INTO
   )
 VALUES
   (
-    3,
-    '512',
-    361.94,
-    '2023-11-24 20:55:50',
-    '2023-11-24 20:55:50',
-    1
+    69,
+    '256GB',
+    50.00,
+    '2023-11-25 00:27:27',
+    '2023-11-25 00:27:27',
+    29
   );
 INSERT INTO
   `hddOptions` (
@@ -107,12 +107,12 @@ INSERT INTO
   )
 VALUES
   (
-    4,
-    '128',
-    356.49,
-    '2023-11-24 20:55:52',
-    '2023-11-24 20:55:52',
-    2
+    70,
+    '256GB',
+    50.00,
+    '2023-11-25 00:31:27',
+    '2023-11-25 00:31:27',
+    30
   );
 INSERT INTO
   `hddOptions` (
@@ -125,12 +125,12 @@ INSERT INTO
   )
 VALUES
   (
-    5,
-    '256',
-    376.49,
-    '2023-11-24 20:55:53',
-    '2023-11-24 20:55:53',
-    2
+    71,
+    '256GB',
+    50.00,
+    '2023-11-25 00:31:55',
+    '2023-11-25 00:31:55',
+    31
   );
 INSERT INTO
   `hddOptions` (
@@ -143,12 +143,102 @@ INSERT INTO
   )
 VALUES
   (
-    6,
-    '512',
-    396.49,
-    '2023-11-24 20:55:54',
-    '2023-11-24 20:55:54',
-    2
+    72,
+    '256GB',
+    50.00,
+    '2023-11-25 00:32:12',
+    '2023-11-25 00:32:12',
+    32
+  );
+INSERT INTO
+  `hddOptions` (
+    `id`,
+    `size`,
+    `price`,
+    `createdAt`,
+    `updatedAt`,
+    `laptopId`
+  )
+VALUES
+  (
+    73,
+    '256GB',
+    50.00,
+    '2023-11-25 00:36:48',
+    '2023-11-25 00:36:48',
+    33
+  );
+INSERT INTO
+  `hddOptions` (
+    `id`,
+    `size`,
+    `price`,
+    `createdAt`,
+    `updatedAt`,
+    `laptopId`
+  )
+VALUES
+  (
+    74,
+    '256GB',
+    50.00,
+    '2023-11-25 00:38:40',
+    '2023-11-25 00:38:40',
+    34
+  );
+INSERT INTO
+  `hddOptions` (
+    `id`,
+    `size`,
+    `price`,
+    `createdAt`,
+    `updatedAt`,
+    `laptopId`
+  )
+VALUES
+  (
+    75,
+    '256GB',
+    50.00,
+    '2023-11-25 00:41:08',
+    '2023-11-25 00:41:08',
+    35
+  );
+INSERT INTO
+  `hddOptions` (
+    `id`,
+    `size`,
+    `price`,
+    `createdAt`,
+    `updatedAt`,
+    `laptopId`
+  )
+VALUES
+  (
+    76,
+    '256GB',
+    50.00,
+    '2023-11-25 00:41:57',
+    '2023-11-25 00:41:57',
+    36
+  );
+INSERT INTO
+  `hddOptions` (
+    `id`,
+    `size`,
+    `price`,
+    `createdAt`,
+    `updatedAt`,
+    `laptopId`
+  )
+VALUES
+  (
+    77,
+    '256GB',
+    50.00,
+    '2023-11-25 00:42:07',
+    '2023-11-25 00:42:07',
+    37
   );
 
 # ------------------------------------------------------------
@@ -166,12 +256,12 @@ INSERT INTO
   )
 VALUES
   (
-    1,
-    'Lenovo V110-15IAP',
-    'Lenovo V110-15IAP, 15.6\" HD, Celeron N3350 1.1GHz, 4GB, 128GB SSD, Windows 10 Home',
-    321.94,
-    '2023-11-24 20:55:47',
-    '2023-11-24 20:55:47'
+    27,
+    'Test Laptop',
+    'A test laptop description',
+    999.99,
+    '2023-11-24 23:02:14',
+    '2023-11-24 23:02:14'
   );
 INSERT INTO
   `laptops` (
@@ -184,12 +274,12 @@ INSERT INTO
   )
 VALUES
   (
-    2,
-    'Lenovo V110-15IAP',
-    'Asus VivoBook 15 X540NA-GQ008T Chocolate Black, 15.6\" HD, Pentium N4200, 4GB, 500GB, Windows 10 Home, En kbd',
-    356.49,
-    '2023-11-24 20:55:51',
-    '2023-11-24 20:55:51'
+    28,
+    'Test Laptop',
+    'A test laptop description',
+    999.99,
+    '2023-11-24 23:06:49',
+    '2023-11-24 23:06:49'
   );
 INSERT INTO
   `laptops` (
@@ -202,12 +292,156 @@ INSERT INTO
   )
 VALUES
   (
-    3,
-    'Lenovo ThinkPad E31-80',
-    'Lenovo ThinkPad E31-80, 13.3\" HD, Celeron 3855U 1.6GHz, 4GB, 128GB SSD, Windows 10 Home',
-    404.23,
-    '2023-11-24 20:55:55',
-    '2023-11-24 20:55:55'
+    29,
+    'Test Laptop',
+    'A test laptop description',
+    999.99,
+    '2023-11-25 00:27:27',
+    '2023-11-25 00:27:27'
+  );
+INSERT INTO
+  `laptops` (
+    `id`,
+    `title`,
+    `description`,
+    `basePrice`,
+    `createdAt`,
+    `updatedAt`
+  )
+VALUES
+  (
+    30,
+    'Test Laptop',
+    'A test laptop description',
+    999.99,
+    '2023-11-25 00:31:27',
+    '2023-11-25 00:31:27'
+  );
+INSERT INTO
+  `laptops` (
+    `id`,
+    `title`,
+    `description`,
+    `basePrice`,
+    `createdAt`,
+    `updatedAt`
+  )
+VALUES
+  (
+    31,
+    'Test Laptop',
+    'A test laptop description',
+    999.99,
+    '2023-11-25 00:31:55',
+    '2023-11-25 00:31:55'
+  );
+INSERT INTO
+  `laptops` (
+    `id`,
+    `title`,
+    `description`,
+    `basePrice`,
+    `createdAt`,
+    `updatedAt`
+  )
+VALUES
+  (
+    32,
+    'Test Laptop',
+    'A test laptop description',
+    999.99,
+    '2023-11-25 00:32:12',
+    '2023-11-25 00:32:12'
+  );
+INSERT INTO
+  `laptops` (
+    `id`,
+    `title`,
+    `description`,
+    `basePrice`,
+    `createdAt`,
+    `updatedAt`
+  )
+VALUES
+  (
+    33,
+    'Test Laptop',
+    'A test laptop description',
+    999.99,
+    '2023-11-25 00:36:48',
+    '2023-11-25 00:36:48'
+  );
+INSERT INTO
+  `laptops` (
+    `id`,
+    `title`,
+    `description`,
+    `basePrice`,
+    `createdAt`,
+    `updatedAt`
+  )
+VALUES
+  (
+    34,
+    'Test Laptop',
+    'A test laptop description',
+    999.99,
+    '2023-11-25 00:38:40',
+    '2023-11-25 00:38:40'
+  );
+INSERT INTO
+  `laptops` (
+    `id`,
+    `title`,
+    `description`,
+    `basePrice`,
+    `createdAt`,
+    `updatedAt`
+  )
+VALUES
+  (
+    35,
+    'Test Laptop',
+    'A test laptop description',
+    999.99,
+    '2023-11-25 00:41:08',
+    '2023-11-25 00:41:08'
+  );
+INSERT INTO
+  `laptops` (
+    `id`,
+    `title`,
+    `description`,
+    `basePrice`,
+    `createdAt`,
+    `updatedAt`
+  )
+VALUES
+  (
+    36,
+    'Test Laptop',
+    'A test laptop description',
+    999.99,
+    '2023-11-25 00:41:57',
+    '2023-11-25 00:41:57'
+  );
+INSERT INTO
+  `laptops` (
+    `id`,
+    `title`,
+    `description`,
+    `basePrice`,
+    `createdAt`,
+    `updatedAt`
+  )
+VALUES
+  (
+    37,
+    'Test Laptop',
+    'A test laptop description',
+    999.99,
+    '2023-11-25 00:42:07',
+    '2023-11-25 00:42:07'
   );
 
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
