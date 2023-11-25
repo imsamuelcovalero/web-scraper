@@ -14,3 +14,11 @@
 .env.test.local
 .env.production.local
 npm-debug.log*
+
+# Generated script files
+*.sql
+*.json
+
+# Alternatively, if you want to ignore only specific files
+# lenovo_laptops.sql
+# lenovo-laptops.json

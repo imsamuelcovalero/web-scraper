@@ -26,8 +26,10 @@ services:
     ports:
       - "3306:3306"
     restart: 'always' # Reinicia o container automaticamente se ele parar
+    env_file:
+      - ./.env # Adiciona o arquivo .env para carregar as variáveis de ambiente
     environment:
-      MYSQL_ROOT_PASSWORD: 123456
+      MYSQL_ROOT_PASSWORD: ${MYSQL_PASSWORD}
     # networks:
     #   - web-scraper_network-app-to-bd # Adiciona este serviço à rede especificada
     cap_add:

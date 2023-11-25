@@ -1,9 +1,13 @@
 /* File: script.js */
+// Função autoexecutável para usar importações modernas e async/await
 (async () => {
+  // Importação das dependências
   const inquirer = await import('inquirer');
+  // Importação das funções do scraper
   // eslint-disable-next-line import/extensions
   const scraperFunctions = await import('./src/scraperFunctions.js');
 
+  // Função para executar a ação escolhida pelo usuário
   async function executeOption(option) {
     switch (option) {
       case 'Padrão: Raspar e salvar no banco MySQL':
@@ -27,6 +31,7 @@
     }
   }
 
+  // Função principal que exibe o menu de opções para o usuário
   function main() {
     inquirer.default.prompt([
       {
@@ -50,5 +55,6 @@
       });
   }
 
+  // Inicia o script
   main();
 })();
