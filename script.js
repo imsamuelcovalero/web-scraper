@@ -9,23 +9,23 @@
   // Função para executar a ação escolhida pelo usuário
   async function executeOption(option) {
     switch (option) {
-      case '1) Padrão: Raspar e salvar no banco MySQL':
+      case '1':
         await scraperFunctions.scrapeAndSave();
         break;
-      case '2) Gerar arquivo SQL proveniente do banco MySQL':
+      case '2':
         await scraperFunctions.generateSQL();
         break;
-      case '3) Gerar arquivo JSON a partir do banco MySQL':
+      case '3':
         await scraperFunctions.exportMySQLtoJSON();
         break;
-      case '4) Gerar ambos os arquivos a partir do banco MySQL':
+      case '4':
         await scraperFunctions.exportMySQLtoJSON();
         await scraperFunctions.generateSQL();
         break;
-      case '5) Gerar arquivo JSON diretamente pela raspagem (sem banco de dados)':
+      case '5':
         await scraperFunctions.generateJSON();
         break;
-      case '6) Cancelar':
+      case '6':
         console.log('Ação cancelada.');
         break;
       default:
@@ -41,12 +41,12 @@
         name: 'action',
         message: 'Escolha uma ação:',
         choices: [
-          '1) Padrão: Raspar e salvar no banco MySQL',
-          '2) Gerar arquivo SQL proveniente do banco MySQL',
-          '3) Gerar arquivo JSON a partir do banco MySQL',
-          '4) Gerar ambos os arquivos a partir do banco MySQL',
-          '5) Gerar arquivo JSON diretamente pela raspagem (sem banco de dados)',
-          '6) Cancelar',
+          { name: '1) Padrão: Raspar e salvar no banco MySQL', value: '1' },
+          { name: '2) Gerar arquivo SQL proveniente do banco MySQL', value: '2' },
+          { name: '3) Gerar arquivo JSON a partir do banco MySQL', value: '3' },
+          { name: '4) Gerar ambos os arquivos a partir do banco MySQL', value: '4' },
+          { name: '5) Gerar arquivo JSON diretamente pela raspagem (sem banco de dados)', value: '5' },
+          { name: '6) Cancelar', value: '6' },
         ],
       },
     ])
