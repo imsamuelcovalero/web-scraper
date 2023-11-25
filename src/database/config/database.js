@@ -11,11 +11,11 @@ const Sequelize = require('sequelize');
 // As informações para a conexão são retiradas das variáveis de ambiente,
 // o que proporciona maior segurança e flexibilidade na configuração do banco de dados.
 const sequelize = new Sequelize(
-  process.env.MYSQL_DB, // Nome do banco de dados.
-  process.env.MYSQL_USER, // Usuário do banco de dados.
+  process.env.MYSQL_DB || 'web-scraper-db', // Nome do banco de dados.
+  process.env.MYSQL_USER || 'root', // Usuário do banco de dados.
   process.env.MYSQL_PASSWORD, // Senha do banco de dados.
   {
-    host: process.env.MYSQL_HOST, // Endereço do host do banco de dados.
+    host: process.env.MYSQL_HOST || 'localhost', // Host do banco de dados.
     dialect: 'mysql', // Define o tipo de banco de dados.
     operatorsAliases: 0, // Desativa aliases de operadores para evitar advertências de segurança.
 
