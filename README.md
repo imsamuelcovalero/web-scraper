@@ -17,6 +17,7 @@ O projeto **Raspagem e Armazenamento de Dados de Laptops** é uma aplicação de
     - [Estrutura do Projeto](#estrutura-do-projeto)
     - [Arquivos](#arquivos)
     - [Tecnologias e Ferramentas Utilizadas](#tecnologias-e-ferramentas-utilizadas)
+    - [Testes](#testes)
     - [Lint](#lint)
   - [Notas](#notas)
     - [Git, GitHub e Histórico de Commits](#git-github-e-histórico-de-commits)
@@ -65,7 +66,7 @@ npm install
 
 Configure o banco de dados MySQL e atualize o arquivo `.env` com as informações de conexão. Tanto o `docker-compose.yaml` quanto o arquivo `database.js` estão esperando usar as variáveis de ambiente definidas no arquivo `.env`.
 
-Crie um arquivo `.env` na raiz do projeto com o seguinte conteúdo, substituindo os valores conforme necessário:
+Renomeie o arquivo `.env.example` para `.env` e atualize as variáveis de ambiente de acordo com o seu ambiente de desenvolvimento:
 
 ```bash
 APP_PORT=3000 # Porta para o servidor escutar (padrão: 3000)
@@ -141,11 +142,23 @@ Siga as instruções na tela para selecionar a opção desejada e proceder com a
 
 ### Tecnologias e Ferramentas Utilizadas
 
-- [**Node.js**](https://nodejs.org): Ambiente de execução para `JavaScript`.
-- [**Puppeteer**](https://pptr.dev/): Biblioteca para controle de navegador *headless*.
-- [**MySQL**](https://www.mysql.com/): Sistema de gerenciamento de banco de dados.
-- [**Sequelize**](https://sequelize.org/): `ORM` para `Node.js`.
-- [**Inquirer.js**](https://www.npmjs.com/package/inquirer): Biblioteca para interface de linha de comando interativa.
+- [**Node.js**](https://nodejs.org): Ambiente de execução para `JavaScript`. Escolhido por sua eficiência e vasta comunidade de apoio, `Node.js` é o ambiente de execução ideal para desenvolvimento `JavaScript` do lado do servidor.
+- [**Puppeteer**](https://pptr.dev/): Biblioteca para controle de navegador *headless*. Utilizei o `Puppeteer` pela sua capacidade de automatizar ações em navegadores de forma *headless*, permitindo a raspagem de dados de forma eficiente.
+- [**MySQL**](https://www.mysql.com/): Sistema de gerenciamento de banco de dados. Optei pelo `MySQL` devido à sua robustez, escalabilidade e facilidade de uso como sistema de gerenciamento de banco de dados.
+- [**Sequelize**](https://sequelize.org/): `ORM` para `Node.js`. Escolhido por ser um `ORM` poderoso, o que facilita a escrita de consultas de banco de dados de forma segura e mantém nosso código limpo e fácil de manter.
+- [**Inquirer.js**](https://www.npmjs.com/package/inquirer): Biblioteca para *interface* de linha de comando interativa. `Inquirer.js` torna as interações de linha de comando simples e intuitivas, melhorando a experiência do usuário ao executar o *script*.
+- [**Jest**](https://jestjs.io/): `Framework` de testes em `JavaScript`. `Jest` é um `framework` de testes completo e de fácil configuração, que oferece funcionalidades como *mock*, cobertura de código e isolamento de teste, sendo a escolha perfeita para garantir a qualidade do código.
+- [**ESLint**](https://eslint.org/): Ferramenta de análise de código para identificar padrões problemáticos encontrados no código `JavaScript`. `ESLint` ajuda a manter o código alinhado com as melhores práticas e padrões da indústria, além de identificar problemas antes que eles se tornem críticos, o que é essencial para a manutenção a longo prazo do projeto.
+
+### Testes
+
+Para executar os testes da aplicação, use o comando:
+
+```bash
+npm test
+```
+
+Os testes foram desenvolvidos utilizando o `framework` [Jest](https://jestjs.io/) e são projetados para validar as funcionalidades críticas da aplicação. Eles podem ser encontrados no diretório `__tests__` e seu propósito é garantir que a aplicação funcione corretamente e que as alterações feitas no código não quebrem as funcionalidades existentes.
 
 ### Lint
 
