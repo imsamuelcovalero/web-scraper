@@ -95,12 +95,12 @@ npm start
 
 Após a execução do comando, você será apresentado com um menu interativo com as seguintes opções:
 
-1. **Padrão: Raspar e salvar no banco MySQL** - Esta opção extrai dados de laptops Lenovo do site de e-commerce e os armazena em um banco de dados MySQL, que é um sistema de gerenciamento de banco de dados usado para organizar e armazenar dados.
-2. **Gerar arquivo SQL proveniente do banco MySQL** - Selecionando esta opção, um arquivo SQL será gerado. SQL (Linguagem de Consulta Estruturada) é usado para comunicar com e manipular bancos de dados. O arquivo SQL contém comandos que podem ser usados para recriar os dados em outro banco de dados MySQL.
-3. **Gerar arquivo JSON a partir do banco MySQL** - Esta opção permite exportar os dados do banco de dados MySQL para um arquivo JSON. JSON (JavaScript Object Notation) é um formato leve de troca de dados, fácil de ler e escrever para humanos, e fácil de analisar e gerar por máquinas.
-4. **Gerar ambos os arquivos a partir do banco MySQL** - Esta opção realiza ambas as tarefas de geração de arquivos JSON e SQL a partir do banco de dados.
-5. **Gerar arquivo JSON diretamente pela raspagem (sem banco de dados)** - Escolha esta opção para raspar os dados e salvá-los diretamente em um arquivo JSON, sem a necessidade de armazenamento em um banco de dados. É útil para casos de uso simples onde o armazenamento em banco de dados não é necessário.
-6. **Cancelar** - Use esta opção para sair do script.
+1. **Padrão: Raspar e salvar no banco MySQL** - Esta opção extrai dados de laptops Lenovo do site de e-commerce e os armazena no banco de dados MySQL. Os dados coletados podem ser utilizados para diversas análises e integrações.
+2. **Gerar arquivo SQL proveniente do banco MySQL** - Selecionando esta opção, um arquivo `lenovo_laptops.sql` será gerado, contendo os comandos SQL para recriar os dados raspados em outro banco de dados MySQL. Este arquivo pode ser utilizado para migração, backup ou qualquer outra operação que exija a restauração dos dados em um novo ambiente.
+3. **Gerar arquivo JSON a partir do banco MySQL** - Esta opção permite a exportação dos dados do banco de dados MySQL para um arquivo `lenovo-laptops.json`. Este formato é amplamente utilizado para a troca de dados entre servidores e aplicações web, sendo também útil para análises e operações que requerem um formato de dados mais flexível.
+4. **Gerar ambos os arquivos a partir do banco MySQL** - Esta opção realiza a geração dos arquivos `lenovo_laptops.sql` e `lenovo-laptops.json`, permitindo que você tenha tanto o backup completo do banco de dados quanto uma representação dos dados em um formato amplamente compatível para uso em diversas aplicações.
+5. **Gerar arquivo JSON diretamente pela raspagem (sem banco de dados)** - Escolha esta opção para gerar um arquivo `lenovo-laptops.json` diretamente a partir da raspagem de dados, sem a necessidade de armazenamento intermediário em um banco de dados. Isso é ideal para situações em que a persistência de dados não é necessária ou quando se deseja trabalhar com os dados de maneira imediata.
+6. **Cancelar** - Use esta opção para sair do script e encerrar a execução do programa.
 
 Siga as instruções na tela para selecionar a opção desejada e proceder com a raspagem e o armazenamento de dados.
 
@@ -119,13 +119,19 @@ Siga as instruções na tela para selecionar a opção desejada e proceder com a
 │   │       └── Laptop.js
 │   ├── scraperFunctions.js
 │   └── ...
+├── tests
+|   ├── ...
 ├── .env.example
 ├── createDatabase.js
 ├── docker-compose.yaml
+├── lenovo_laptops.sql *
+├── lenovo-laptops.json *
 ├── package.json
 ├── script.js
 └── ...
 ```
+
+**Nota: Os arquivos `lenovo_laptops.sql` e `lenovo-laptops.json` são criados apenas quando determinadas ações de exportação de dados são realizadas pelo usuário. Eles não são incluídos por padrão no repositório e serão encontrados na raiz do projeto somente após a execução dos comandos relevantes do `script`.*
 
 ### Arquivos
 
@@ -137,6 +143,8 @@ Siga as instruções na tela para selecionar a opção desejada e proceder com a
 - **.env.example:** Contém um exemplo do arquivo `.env` utilizado para armazenar as variáveis de ambiente.
 - **createDatabase.js:** Contém o script para criação do banco de dados.
 - **docker-compose.yaml:** Contém a configuração do banco de dados MySQL para uso com `Docker Compose`.
+- **lenovo_laptops.sql:** Contém os comandos SQL para recriar os dados raspados em outro banco de dados MySQL.
+- **lenovo-laptops.json:** Contém os dados raspados em formato `JSON`.
 - **package.json:** Contém as informações do projeto e as dependências da aplicação e os `scripts` de execução.
 - **script.js:** Contém o script principal da aplicação.
 
