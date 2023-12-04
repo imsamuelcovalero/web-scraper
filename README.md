@@ -39,7 +39,7 @@ Este projeto utiliza técnicas de raspagem de dados para extrair informações d
 
 - **Raspagem de Dados:** Extrai informações de *laptops*, incluindo título, descrição e opções de HDD, de um *website* de *e-commerce*.
 - **Armazenamento em Banco de Dados:** Salva os dados raspados em um banco de dados `MySQL`.
-- **Exportação de Dados:** Gera arquivos `JSON` e `SQL` a partir dos dados armazenados no banco de dados.
+- **Exportação de Dados:** Gera arquivos `JSON` e/ou `SQL` a partir dos dados armazenados no banco de dados.
 
 ## Como Rodar a Aplicação
 
